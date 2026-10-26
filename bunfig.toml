@@ -1,0 +1,4 @@
+[test]
+# Selection tests share an in-memory clipboard capture;
+# run them serially so the capture array is not raced.
+concurrency = 1
