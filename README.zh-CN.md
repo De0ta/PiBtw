@@ -4,23 +4,22 @@
 
 # PiBtw
 
-De0ta 基于 [yceachan/pi-better-btw](https://github.com/yceachan/ea-pi-extensions/tree/main/packages/pi-better-btw) 独立维护的定制版，主要优化旁路聊天布局、主题配色和输入交互。本仓库不是上游 npm 发布版；原包名和下方 npm 徽章仍指向上游版本。来源与本地开发说明见 [UPSTREAM.md](UPSTREAM.md)。
+一个 Pi 旁路聊天扩展，提供灵活的浮层布局、跟随主题的配色和轻量输入框。基于 [yceachan/pi-better-btw](https://github.com/yceachan/ea-pi-extensions/tree/main/packages/pi-better-btw) 改进，项目背景与开发方式见 [UPSTREAM.md](UPSTREAM.md)。
 
 **[English](README.md) | 简体中文**
 
 > [!note]
 >
-> 基于 **yceachan** 在 [ea-pi-extensions](https://github.com/yceachan/ea-pi-extensions) 中维护的 pi-better-btw，后者源自 **Nico Bailon** 的 [pi-side-chat](https://github.com/nicobailon/pi-side-chat)。保留原 MIT 许可证与版权声明。
+> 感谢 **yceachan** 的 [pi-better-btw](https://github.com/yceachan/ea-pi-extensions/tree/main/packages/pi-better-btw) 和 **Nico Bailon** 的 [pi-side-chat](https://github.com/nicobailon/pi-side-chat)，PiBtw 在它们的基础上继续改进旁路聊天体验。
 
 ## TL;DR
 
 **把当前会话 fork 到一个旁路会话（btw）中，主线 agent 继续干活。**
 
-[![npm version](https://img.shields.io/npm/v/@yceachan/pi-better-btw?style=for-the-badge)](https://www.npmjs.com/package/@yceachan/pi-better-btw)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
 
 ```bash
-# 在本地 PiBtw 目录运行（npm 包仍是上游版本）
+# 在 PiBtw 目录运行
 pi -e ./srcs/index.ts
 # in pi tui
 > /btw  || or Alt+W
@@ -65,7 +64,7 @@ pi -e ./srcs/index.ts
 
 旁路内 `Ctrl+P` 循环切换模型（优先使用 Pi 配置的模型范围，否则使用全部已认证模型），`Ctrl+Shift+P` 反向切换（Windows 可用 `Alt+P`），`Shift+Tab` 循环切换模型支持的思考强度。这些动作跟随 Pi 的按键配置，提示显示实际按键。`Alt+M` 搜索模型，`Alt+T` 打开思考强度选择器；全部只影响旁路。首次创建继承主线设置，之后独立（本次 Pi 运行期间记忆，不写入主线设置）；不支持思考的模型自动设为 `off`。生成中请先 `Alt+S` 停止再切换。
 
-旁路采用无边框面板，标题与模型信息同排显示，压缩输入区上方空白。面板背景跟随主主题和终端颜色，深色模式略提亮、浅色模式略压暗；仅用户消息保留带内边距的原生背景卡片，不再显示 `[You]`，AI 回复与面板同底色。输入区为左右内收的轻量卡片，使用低反差的主题衍生底色；空白时约三行（含上下留白），多行输入按需增长，最多显示五行正文，并始终保留光标所在行。淡色 `›` 和“问点什么…”仅作显示，不进入草稿。卡片外的常用提示自适应为一行，窄窗逐步隐藏次要操作，完整快捷键仍可通过 `?` 查看。提示使用主题的正文色与弱化色，不再固定白色／灰色；完整快捷键页保留顶部、底部与左右内边距。输入框为空时按 `?` 查看自适应分栏的完整快捷键页，`Esc` 返回；已有草稿时 `?` 正常输入。助手回答直接复用 Pi 主对话的消息渲染器，支持 Markdown、代码高亮、表格和思考内容，流式输出同样生效。上方截图为上游旧版界面。
+旁路采用无边框面板，标题与模型信息同排显示，压缩输入区上方空白。面板背景跟随主主题和终端颜色，深色模式略提亮、浅色模式略压暗；仅用户消息保留带内边距的原生背景卡片，不再显示 `[You]`，AI 回复与面板同底色。输入区为左右内收的轻量卡片，使用低反差的主题衍生底色；空白时约三行（含上下留白），多行输入按需增长，最多显示五行正文，并始终保留光标所在行。淡色 `›` 和“问点什么…”仅作显示，不进入草稿。卡片外的常用提示自适应为一行，窄窗逐步隐藏次要操作，完整快捷键仍可通过 `?` 查看。提示使用主题的正文色与弱化色，不再固定白色／灰色；完整快捷键页保留顶部、底部与左右内边距。输入框为空时按 `?` 查看自适应分栏的完整快捷键页，`Esc` 返回；已有草稿时 `?` 正常输入。助手回答直接复用 Pi 主对话的消息渲染器，支持 Markdown、代码高亮、表格和思考内容，流式输出同样生效。上方截图展示的是最初的界面。
 
 | 快捷键 | 作用 |
 | ------ | ---- |

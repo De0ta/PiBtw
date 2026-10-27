@@ -4,23 +4,22 @@
 
 # PiBtw
 
-De0ta's independently maintained customization of [yceachan/pi-better-btw](https://github.com/yceachan/ea-pi-extensions/tree/main/packages/pi-better-btw), focused on side-chat layout, theme integration and input interaction. This repository is not the upstream npm release; the original package name and npm badge below still refer to upstream. See [UPSTREAM.md](UPSTREAM.md) for provenance and local development details.
+A Pi side-chat extension with flexible layouts, theme-aware colors and a lightweight input card. Based on [yceachan/pi-better-btw](https://github.com/yceachan/ea-pi-extensions/tree/main/packages/pi-better-btw). See [UPSTREAM.md](UPSTREAM.md) for project background and development setup.
 
 **English | [简体中文](README.zh-CN.md)**
 
 > [!note]
 >
-> Based on **yceachan**'s [pi-better-btw](https://github.com/yceachan/ea-pi-extensions/tree/main/packages/pi-better-btw), itself a maintained fork of **Nico Bailon**'s [pi-side-chat](https://github.com/nicobailon/pi-side-chat). Original MIT license and copyright notices are preserved.
+> Built on **yceachan**'s [pi-better-btw](https://github.com/yceachan/ea-pi-extensions/tree/main/packages/pi-better-btw), which grew from **Nico Bailon**'s [pi-side-chat](https://github.com/nicobailon/pi-side-chat).
 
 ## TL;DR
 
 **Fork the current conversation into a side chat (`btw`) while the main agent keeps working.**
 
-[![npm version](https://img.shields.io/npm/v/@yceachan/pi-better-btw?style=for-the-badge)](https://www.npmjs.com/package/@yceachan/pi-better-btw)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
 
 ```bash
-# Run inside this local PiBtw checkout (the npm package is still upstream)
+# Run inside the PiBtw directory
 pi -e ./srcs/index.ts
 # in pi tui
 > /btw  || or Alt+W
@@ -65,7 +64,7 @@ The default main footer shows `[● side chat]` beside its model: yellow while t
 
 Inside the side chat, `Ctrl+P` cycles models in Pi's configured scope (or all available authenticated models), `Ctrl+Shift+P` cycles backward (`Alt+P` is a Windows-friendly alternative), and `Shift+Tab` cycles supported thinking levels. These actions follow your Pi keybindings; hints show the effective keys. `Alt+M` searches models and `Alt+T` opens the thinking picker. All changes affect only the side agent. Initial settings are inherited once, then independent and remembered for this Pi process, never written to main settings. Models without reasoning automatically use `off`. Stop a running turn with `Alt+S` before switching.
 
-The borderless panel places the title and model details on one row, with a compact editor and hints below. Its background follows your main theme and terminal colors, slightly lighter in dark mode and darker in light mode. Only user messages have padded native message cards (without a `[You]` prefix); AI replies share the panel background. The editor is an inset, low-contrast card: an empty draft takes three rows including vertical padding, growing to at most five content rows while keeping the cursor visible. The faint `›` and “问点什么…” placeholder are presentation only, never draft text. A single hint row sits outside the card; narrow windows drop secondary actions before clipping keys, with the full list still available under `?`. Keys and descriptions use the theme's text/muted colors rather than fixed white/gray. The full shortcut page has extra top, bottom and horizontal padding. Type `?` on an empty draft for the full responsive shortcut page; `Esc` returns. In a nonempty draft, `?` remains ordinary text. Assistant responses reuse Pi's main message renderer for Markdown, highlighted code, tables and thinking, including streamed output. The upstream screenshot above shows the old UI.
+The borderless panel places the title and model details on one row, with a compact editor and hints below. Its background follows your main theme and terminal colors, slightly lighter in dark mode and darker in light mode. Only user messages have padded native message cards (without a `[You]` prefix); AI replies share the panel background. The editor is an inset, low-contrast card: an empty draft takes three rows including vertical padding, growing to at most five content rows while keeping the cursor visible. The faint `›` and “问点什么…” placeholder are presentation only, never draft text. A single hint row sits outside the card; narrow windows drop secondary actions before clipping keys, with the full list still available under `?`. Keys and descriptions use the theme's text/muted colors rather than fixed white/gray. The full shortcut page has extra top, bottom and horizontal padding. Type `?` on an empty draft for the full responsive shortcut page; `Esc` returns. In a nonempty draft, `?` remains ordinary text. Assistant responses reuse Pi's main message renderer for Markdown, highlighted code, tables and thinking, including streamed output. The screenshot above shows the original interface.
 
 | Shortcut | Action |
 | -------- | ------ |
