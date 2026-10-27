@@ -18,11 +18,16 @@ A Pi side-chat extension with flexible layouts, theme-aware colors and a lightwe
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
 
+Requires Pi 1.4 or later.
+
 ```bash
-# Run inside the PiBtw directory
-pi -e ./srcs/index.ts
-# in pi tui
-> /btw  || or Alt+W
+pi install npm:@link17528/pi-btw
+```
+
+Run `/reload` in Pi, then use `/btw` or `Alt+W` to open the side chat. To try it without installing:
+
+```bash
+pi -e npm:@link17528/pi-btw
 ```
 
 You're in the middle of a longer task and want to ask something small without derailing the main thread — check an API detail, sanity-check an approach, search something, or peek at what the main agent is doing. Open the btw TUI overlay, ask, close it. The main thread never gets interrupted.
@@ -254,4 +259,4 @@ The published package ships `srcs/`, `prompts/`, `config.json` and the docs; tes
 
 ## License
 
-MIT — see [LICENSE](LICENSE). The license retains both copyright lines: the original upstream author (Nico Bailon) and the fork's modifier (yceachan).
+[MIT](LICENSE).

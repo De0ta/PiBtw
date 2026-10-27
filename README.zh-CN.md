@@ -18,11 +18,16 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
 
+需要 Pi 1.4 或更新版本。
+
 ```bash
-# 在 PiBtw 目录运行
-pi -e ./srcs/index.ts
-# in pi tui
-> /btw  || or Alt+W
+pi install npm:@link17528/pi-btw
+```
+
+在 Pi 中执行 `/reload`，然后用 `/btw` 或 `Alt+W` 打开旁路聊天。也可以临时体验：
+
+```bash
+pi -e npm:@link17528/pi-btw
 ```
 
 你在处理一个较长任务时，想顺便问点小事又不想打断主线——查一个 API 细节、验证一个思路、搜点东西，或者看看主线 agent 在干什么。打开BTW Tui OverLay，提问，关闭。主线线程完全不受打扰。
@@ -254,4 +259,4 @@ bun test            # bun test test/（串行运行，见 bunfig.toml）
 
 ## License
 
-MIT —— 见 [LICENSE](LICENSE)。许可证同时保留两行版权：上游原作者（Nico Bailon）与 fork 修改者（yceachan）。
+[MIT](LICENSE)。

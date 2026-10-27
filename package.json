@@ -1,7 +1,7 @@
 {
-  "name": "@yceachan/pi-better-btw",
-  "version": "1.1.0",
-  "description": "pi extension: /btw side-chat overlay forked from pi-side-chat, with main-context sharing and a side-lane guard",
+  "name": "@link17528/pi-btw",
+  "version": "1.0.0",
+  "description": "Pi side-chat extension with flexible layouts, theme-aware colors, independent models and a lightweight input card",
   "type": "module",
   "keywords": [
     "pi-package",
@@ -13,23 +13,24 @@
     "tui",
     "coding-agent"
   ],
-  "author": "yceachan <yceachan@foxmail.com>",
+  "author": "De0ta (https://github.com/De0ta)",
   "contributors": [
+    "yceachan <yceachan@foxmail.com>",
     "Nico Bailon"
   ],
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yceachan/ea-pi-extensions.git",
-    "directory": "packages/pi-better-btw"
+    "url": "git+https://github.com/De0ta/PiBtw.git"
   },
-  "homepage": "https://github.com/yceachan/ea-pi-extensions#readme",
+  "homepage": "https://github.com/De0ta/PiBtw#readme",
   "files": [
     "srcs",
     "prompts",
     "config.json",
     "README.md",
     "README.zh-CN.md",
+    "UPSTREAM.md",
     "banner.png"
   ],
   "publishConfig": {

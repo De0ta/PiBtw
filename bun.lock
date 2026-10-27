@@ -3,7 +3,7 @@
   "configVersion": 1,
   "workspaces": {
     "": {
-      "name": "pi-better-btw",
+      "name": "@link17528/pi-btw",
       "devDependencies": {
         "@earendil-works/pi-agent-core": "^1.0.0",
         "@earendil-works/pi-ai": "^1.0.0",
