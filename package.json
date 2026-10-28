@@ -31,7 +31,8 @@
     "README.md",
     "README.zh-CN.md",
     "UPSTREAM.md",
-    "banner.png"
+    "banner.png",
+    "preview.jpg"
   ],
   "publishConfig": {
     "access": "public"
